@@ -34,6 +34,21 @@ def calcPredictions(trainX,trainY,x):
     return predictions
 
 def encodingOrdinalLabel(df):
+    '''
+    This functions uses predefined maps for labelling values in provided dataframes.
+    After labeling, original columns are replaced with new labeled columns
+    Parameters
+    ----------
+    df : Dataframe
+        This dataframe is used to create Oridinal Labels It contains actual data,
+        which needs to be labeled.
+
+    Returns
+    -------
+    object_df : Dataframe
+        Labeled dataframe is returned.
+
+    '''
     condition_map = {'Ex':5,'Gd':4,'TA':3,'Fa':2,'Po':1}
     slope_map = {'Gtl':1,'Mod':2,'Sev':3}
     paved_map = {'Y':3,'P':2,'N':1}
@@ -59,8 +74,6 @@ def encodingOrdinalLabel(df):
     
     object_df = object_df.drop(temp,axis=1)
     return object_df
-    
-    
     
 data = pd.read_csv("../Datasets/housing_price/train.csv",index_col='Id')
 
