@@ -32,7 +32,7 @@ print(data)
 
 #sns.jointplot(x=data['depth'], y=data['table'], kind="kde")
 
-X = data.drop(['price','Id'],axis=1)
+X = data.drop(['price'],axis=1)
 
 #features = ['carat','depth','table','x','y','z']
 Y = data.price
