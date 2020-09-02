@@ -9,3 +9,7 @@ Created on Tue Sep  1 12:59:12 2020
 import pandas as pd
 
 data = pd.read_csv("../Dataset/wine_review.csv")
+
+group = data.groupby('points').price.count()
+
+
