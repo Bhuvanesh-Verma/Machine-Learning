@@ -14,12 +14,13 @@ import pandas as pd
 
 
 index = pd.Series(["One","Two"])
-colors = pd.Series(['Blue','Green'],index = index) 
-names = pd.Series(['Ram','Shyam'],index = index)
+colors = pd.Series(['Blue','Green']) 
+names = pd.Series(['Ram','Shyam'])
+
 
 # Creating a Dataframe
-data = pd.DataFrame({"Colors":colors,"Names":names},index=index)
+data = pd.DataFrame({"Colors":colors,"Names":names})
 
 #Saving a csv
-
-data.to_csv("basic.csv")
+print(data)
+#data.to_csv("basic.csv")
